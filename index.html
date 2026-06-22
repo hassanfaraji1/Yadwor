@@ -34,10 +34,10 @@
     --shadow-md: 0 8px 24px rgba(13, 71, 161, 0.08);
     --shadow-lg: 0 16px 48px rgba(13, 71, 161, 0.12);
     --shadow-xl: 0 24px 64px rgba(13, 71, 161, 0.16);
-    --radius-sm: 12px;
-    --radius-md: 18px;
-    --radius-lg: 24px;
-    --radius-xl: 32px;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
   }
 
   html {
@@ -52,87 +52,57 @@
     overflow-x: hidden;
   }
 
-  /* Top Academy Bar */
-  .academy-bar {
-    background: linear-gradient(135deg, var(--primary-blue-dark) 0%, var(--primary-blue) 100%);
-    color: white;
-    padding: 10px 24px;
-    font-size: 13px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .academy-bar svg {
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
-  }
-
-  /* Navigation */
+  /* Slim Navigation */
   .navbar {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.98);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border-bottom: 1px solid rgba(232, 236, 241, 0.6);
+    border-bottom: 1px solid rgba(232, 236, 241, 0.5);
     box-shadow: var(--shadow-sm);
   }
 
   .nav-container {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 14px 24px;
+    padding: 10px 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 16px;
   }
 
   .nav-brand {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
     text-decoration: none;
   }
 
   .nav-logo-wrap {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
   }
 
   .nav-logo-wrap img {
-    height: 44px;
+    height: 36px;
     width: auto;
   }
 
   .nav-logo-text {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 900;
     color: var(--primary-blue);
     letter-spacing: -0.5px;
   }
 
-  .nav-divider {
-    width: 1px;
-    height: 32px;
-    background: var(--border-color);
-  }
-
-  .nav-academy-logo {
-    height: 40px;
-    width: auto;
-  }
-
   .nav-links {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 24px;
     list-style: none;
   }
 
@@ -140,7 +110,7 @@
     text-decoration: none;
     color: var(--text-secondary);
     font-weight: 600;
-    font-size: 15px;
+    font-size: 14px;
     transition: color 0.2s ease;
     position: relative;
   }
@@ -152,7 +122,7 @@
   .nav-links a::after {
     content: '';
     position: absolute;
-    bottom: -6px;
+    bottom: -4px;
     right: 0;
     width: 0;
     height: 2px;
@@ -167,10 +137,31 @@
   .nav-actions {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
   }
 
-  /* Language Selector */
+  .nav-cta {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-light) 100%);
+    color: white !important;
+    padding: 8px 18px;
+    border-radius: 100px;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(13, 71, 161, 0.25);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 13px;
+  }
+
+  .nav-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(13, 71, 161, 0.35);
+  }
+
+  .nav-cta::after {
+    display: none !important;
+  }
+
+  /* Language Selector - Desktop */
   .lang-selector {
     position: relative;
   }
@@ -178,15 +169,15 @@
   .lang-btn {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 8px 14px;
+    gap: 6px;
+    padding: 6px 12px;
     background: var(--bg-color);
     border: 1px solid var(--border-color);
     border-radius: 100px;
     cursor: pointer;
     font-family: inherit;
-    font-weight: 700;
-    font-size: 14px;
+    font-weight: 600;
+    font-size: 13px;
     color: var(--text-primary);
     transition: all 0.2s ease;
   }
@@ -197,8 +188,8 @@
   }
 
   .lang-btn svg {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
   }
 
   .lang-dropdown {
@@ -209,7 +200,7 @@
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow-lg);
     border: 1px solid var(--border-color);
-    min-width: 160px;
+    min-width: 150px;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
@@ -228,11 +219,11 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 12px 16px;
+    padding: 10px 14px;
     cursor: pointer;
     transition: background 0.2s ease;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 13px;
     color: var(--text-primary);
   }
 
@@ -245,49 +236,150 @@
     color: white;
   }
 
-  .lang-flag {
-    width: 24px;
-    height: 16px;
-    border-radius: 3px;
-    object-fit: cover;
-  }
-
-  .nav-cta {
-    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-light) 100%);
-    color: white !important;
-    padding: 10px 22px;
-    border-radius: 100px;
-    font-weight: 700;
-    box-shadow: 0 4px 12px rgba(13, 71, 161, 0.25);
-    transition: all 0.3s ease;
-    text-decoration: none;
-    font-size: 14px;
-  }
-
-  .nav-cta:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(13, 71, 161, 0.35);
-  }
-
-  .nav-cta::after {
-    display: none !important;
-  }
-
   .menu-toggle {
     display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+  }
+
+  .menu-toggle svg {
+    width: 22px;
+    height: 22px;
+    stroke: var(--primary-blue);
+  }
+
+  /* Side Menu */
+  .side-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background: white;
+    box-shadow: var(--shadow-xl);
+    z-index: 2000;
+    transition: right 0.3s ease;
+    padding: 24px;
+    overflow-y: auto;
+  }
+
+  .side-menu.active {
+    right: 0;
+  }
+
+  .side-menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .side-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .side-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .side-menu-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--primary-blue);
+  }
+
+  .side-menu-close {
     background: none;
     border: none;
     cursor: pointer;
     padding: 8px;
   }
 
-  .menu-toggle svg {
-    width: 28px;
-    height: 28px;
-    stroke: var(--primary-blue);
+  .side-menu-close svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--text-primary);
   }
 
-  /* Hero Section - Cover Style */
+  .side-menu-links {
+    list-style: none;
+    margin-bottom: 32px;
+  }
+
+  .side-menu-links li {
+    margin-bottom: 16px;
+  }
+
+  .side-menu-links a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 15px;
+    display: block;
+    padding: 12px 16px;
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease;
+  }
+
+  .side-menu-links a:hover {
+    background: var(--primary-blue-50);
+    color: var(--primary-blue);
+  }
+
+  .side-menu-lang {
+    border-top: 1px solid var(--border-color);
+    padding-top: 24px;
+  }
+
+  .side-menu-lang-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .side-menu-lang-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .side-menu-lang-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-primary);
+  }
+
+  .side-menu-lang-option:hover {
+    background: var(--primary-blue-50);
+  }
+
+  .side-menu-lang-option.active {
+    background: var(--primary-blue);
+    color: white;
+  }
+
+  /* Hero Section */
   .hero {
     position: relative;
     overflow: hidden;
@@ -297,7 +389,7 @@
   .hero-cover {
     position: relative;
     width: 100%;
-    height: 600px;
+    height: 520px;
     overflow: hidden;
   }
 
@@ -311,55 +403,27 @@
   .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(10, 53, 120, 0.85) 0%, rgba(13, 71, 161, 0.7) 50%, rgba(245, 124, 0, 0.5) 100%);
+    background: linear-gradient(135deg, rgba(10, 53, 120, 0.88) 0%, rgba(13, 71, 161, 0.75) 50%, rgba(245, 124, 0, 0.55) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   .hero-content {
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 40px 24px;
+    padding: 30px 24px;
     text-align: center;
     color: white;
     animation: fadeInUp 0.8s ease;
   }
 
-  .hero-badges {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    margin-bottom: 24px;
-    flex-wrap: wrap;
-  }
-
-  .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 100px;
-    font-size: 14px;
-    font-weight: 700;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-  }
-
-  .hero-badge svg {
-    width: 16px;
-    height: 16px;
-  }
-
   .hero-title {
-    font-size: clamp(36px, 5vw, 64px);
+    font-size: clamp(30px, 5vw, 52px);
     font-weight: 900;
-    line-height: 1.15;
-    margin-bottom: 20px;
-    letter-spacing: -1px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
   }
 
   .hero-title .highlight {
@@ -367,31 +431,30 @@
   }
 
   .hero-subtitle {
-    font-size: 18px;
-    opacity: 0.95;
-    margin-bottom: 32px;
-    max-width: 600px;
+    font-size: 16px;
+    opacity: 0.97;
+    margin-bottom: 26px;
+    max-width: 650px;
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.8;
+    line-height: 1.7;
   }
 
   .hero-actions {
     display: flex;
-    gap: 16px;
+    gap: 14px;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 40px;
   }
 
   .btn {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 16px 32px;
+    gap: 8px;
+    padding: 14px 28px;
     border-radius: 100px;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 15px;
     text-decoration: none;
     cursor: pointer;
     border: none;
@@ -400,8 +463,8 @@
   }
 
   .btn svg {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
   }
 
   .btn-primary {
@@ -426,44 +489,6 @@
     box-shadow: var(--shadow-lg);
   }
 
-  .btn-blue {
-    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-light) 100%);
-    color: white;
-    box-shadow: 0 8px 24px rgba(13, 71, 161, 0.3);
-  }
-
-  .btn-blue:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(13, 71, 161, 0.4);
-  }
-
-  .hero-stats {
-    display: flex;
-    gap: 48px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .stat-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .stat-number {
-    font-size: 32px;
-    font-weight: 900;
-    color: white;
-    line-height: 1;
-  }
-
-  .stat-label {
-    font-size: 14px;
-    opacity: 0.85;
-    font-weight: 600;
-    margin-top: 6px;
-  }
-
   @keyframes fadeInUp {
     from {
       opacity: 0;
@@ -475,9 +500,144 @@
     }
   }
 
+  /* Stats Section - White Background */
+  .stats-section {
+    background: white;
+    padding: 40px 24px;
+  }
+
+  .stats-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 16px;
+    background: var(--bg-color);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+  }
+
+  .stat-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .stat-number {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--primary-blue);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .stat-label {
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 600;
+  }
+
+  /* Academy Logo Showcase */
+  .academy-showcase {
+    padding: 60px 24px;
+    background: white;
+    text-align: center;
+  }
+
+  .academy-showcase-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .academy-logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 40px;
+    background: linear-gradient(135deg, var(--primary-blue-50) 0%, white 100%);
+    border-radius: var(--radius-xl);
+    border: 2px solid var(--primary-blue-50);
+    box-shadow: var(--shadow-md);
+    position: relative;
+  }
+
+  .academy-logo-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid white;
+    box-shadow: var(--shadow-md);
+    position: relative;
+    z-index: 2;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .academy-logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 8px;
+  }
+
+  .yadwor-logo-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid white;
+    box-shadow: var(--shadow-md);
+    position: relative;
+    z-index: 3;
+    margin-right: -30px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .yadwor-logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 8px;
+  }
+
+  .academy-logo-text {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--primary-blue);
+    letter-spacing: -0.5px;
+    margin-top: 20px;
+    line-height: 1.4;
+  }
+
+  .academy-logo-text .yadwor-name {
+    color: var(--secondary-orange);
+  }
+
+  .academy-logo-subtext {
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    margin-top: 8px;
+  }
+
   /* Section Styles */
   .section {
-    padding: 100px 24px;
+    padding: 80px 24px;
   }
 
   .section-container {
@@ -487,7 +647,7 @@
 
   .section-header {
     text-align: center;
-    margin-bottom: 64px;
+    margin-bottom: 56px;
   }
 
   .section-label {
@@ -509,15 +669,15 @@
   }
 
   .section-title {
-    font-size: clamp(28px, 4vw, 42px);
+    font-size: clamp(26px, 4vw, 38px);
     font-weight: 900;
     color: var(--text-primary);
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     letter-spacing: -0.5px;
   }
 
   .section-subtitle {
-    font-size: 17px;
+    font-size: 16px;
     color: var(--text-secondary);
     max-width: 600px;
     margin: 0 auto;
@@ -525,20 +685,20 @@
 
   /* About Platform Section */
   .about-section {
-    background: white;
+    background: var(--bg-color);
   }
 
   .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 50px;
     align-items: center;
   }
 
   .about-content h2 {
-    font-size: clamp(28px, 3.5vw, 38px);
+    font-size: clamp(26px, 3.5vw, 36px);
     font-weight: 900;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     color: var(--text-primary);
     letter-spacing: -0.5px;
   }
@@ -547,32 +707,11 @@
     color: var(--primary-blue);
   }
 
-  .about-academy-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    background: var(--primary-blue-50);
-    padding: 12px 20px;
-    border-radius: var(--radius-md);
-    margin-bottom: 24px;
-    border-right: 4px solid var(--primary-blue);
-  }
-
-  .about-academy-badge img {
-    height: 40px;
-  }
-
-  .about-academy-badge span {
-    font-weight: 700;
-    color: var(--primary-blue);
-    font-size: 14px;
-  }
-
   .about-text {
-    font-size: 16px;
+    font-size: 15px;
     color: var(--text-secondary);
-    line-height: 1.9;
-    margin-bottom: 16px;
+    line-height: 1.8;
+    margin-bottom: 14px;
   }
 
   .about-text strong {
@@ -582,22 +721,22 @@
 
   .about-quote {
     background: linear-gradient(135deg, var(--primary-blue-50) 0%, var(--secondary-orange-50) 100%);
-    padding: 24px;
+    padding: 20px;
     border-radius: var(--radius-md);
-    margin-top: 24px;
+    margin-top: 20px;
     border-right: 4px solid var(--secondary-orange);
   }
 
   .about-quote p {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 700;
     color: var(--primary-blue);
     line-height: 1.7;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   .about-quote .sub {
-    font-size: 14px;
+    font-size: 13px;
     color: var(--text-secondary);
     font-weight: 600;
   }
@@ -612,117 +751,60 @@
     box-shadow: var(--shadow-xl);
   }
 
-  .about-image-badge {
-    position: absolute;
-    bottom: -20px;
-    left: -20px;
-    background: white;
-    padding: 20px 24px;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-lg);
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .about-image-badge-icon {
-    width: 48px;
-    height: 48px;
-    background: var(--secondary-orange-50);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .about-image-badge-icon svg {
-    width: 24px;
-    height: 24px;
-    color: var(--secondary-orange);
-  }
-
-  .about-image-badge-text {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--text-primary);
-  }
-
-  .about-image-badge-sub {
-    font-size: 12px;
-    color: var(--text-muted);
-    font-weight: 600;
-  }
-
   /* Features */
   .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
+    gap: 28px;
   }
 
   .feature-card {
     background: white;
     border-radius: var(--radius-lg);
-    padding: 32px;
-    box-shadow: var(--shadow-sm);
+    padding: 36px;
+    box-shadow: var(--shadow-md);
     border: 1px solid var(--border-color);
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
   }
 
-  .feature-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary-blue), var(--secondary-orange));
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.4s ease;
-  }
-
   .feature-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
     border-color: transparent;
   }
 
-  .feature-card:hover::before {
-    transform: scaleX(1);
-  }
-
   .feature-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 16px;
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
+    box-shadow: var(--shadow-sm);
   }
 
   .feature-icon svg {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
   }
 
   .feature-icon.blue {
-    background: var(--primary-blue-50);
+    background: linear-gradient(135deg, var(--primary-blue-50) 0%, #bbdefb 100%);
     color: var(--primary-blue);
   }
 
   .feature-icon.orange {
-    background: var(--secondary-orange-50);
+    background: linear-gradient(135deg, var(--secondary-orange-50) 0%, #ffe0b2 100%);
     color: var(--secondary-orange);
   }
 
   .feature-title {
-    font-size: 20px;
+    font-size: 21px;
     font-weight: 800;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     color: var(--text-primary);
   }
 
@@ -732,7 +814,7 @@
     line-height: 1.7;
   }
 
-  /* Gallery Section - Always Visible Details */
+  /* Gallery Section */
   .gallery-section {
     background: linear-gradient(135deg, #ffffff 0%, var(--bg-color) 100%);
   }
@@ -780,10 +862,10 @@
   }
 
   .gallery-info-title {
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 800;
     color: var(--text-primary);
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
 
   .gallery-info-desc {
@@ -798,11 +880,11 @@
     gap: 6px;
     background: var(--primary-blue-50);
     color: var(--primary-blue);
-    padding: 4px 12px;
+    padding: 5px 12px;
     border-radius: 100px;
     font-size: 12px;
     font-weight: 700;
-    margin-top: 10px;
+    margin-top: 12px;
   }
 
   .gallery-tag svg {
@@ -810,15 +892,15 @@
     height: 12px;
   }
 
-  /* CEO Section */
-  .ceo-section {
-    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+  /* Honors Section */
+  .honors-section {
+    background: linear-gradient(135deg, var(--primary-blue-dark) 0%, var(--primary-blue) 100%);
     color: white;
     position: relative;
     overflow: hidden;
   }
 
-  .ceo-section::before {
+  .honors-section::before {
     content: '';
     position: absolute;
     top: -200px;
@@ -829,92 +911,161 @@
     border-radius: 50%;
   }
 
-  .ceo-section::after {
-    content: '';
-    position: absolute;
-    bottom: -200px;
-    right: -200px;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
-    border-radius: 50%;
-  }
-
-  .ceo-container {
-    max-width: 1280px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 60px;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-  }
-
-  .ceo-image-wrapper {
-    position: relative;
-  }
-
-  .ceo-image {
-    width: 100%;
-    aspect-ratio: 1;
-    border-radius: var(--radius-xl);
-    object-fit: cover;
-    box-shadow: var(--shadow-xl);
-    border: 4px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .ceo-badge {
-    position: absolute;
-    bottom: -20px;
-    right: -20px;
-    background: var(--secondary-orange);
-    color: white;
-    padding: 16px 24px;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-lg);
-    font-weight: 800;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .ceo-badge svg {
-    width: 16px;
-    height: 16px;
-  }
-
-  .ceo-content .section-label {
+  .honors-section .section-label {
     background: rgba(255, 152, 0, 0.2);
     color: var(--secondary-orange-light);
   }
 
-  .ceo-content .section-title {
+  .honors-section .section-title {
     color: white;
-    text-align: right;
+  }
+
+  .honors-section .section-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .honors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .honor-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .honor-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+  }
+
+  .honor-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--secondary-orange);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow-md);
+  }
+
+  .honor-icon svg {
+    width: 28px;
+    height: 28px;
+    color: white;
+  }
+
+  .honor-title {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+
+  .honor-desc {
+    font-size: 14px;
+    opacity: 0.9;
+    line-height: 1.7;
+  }
+
+  /* CEO Section */
+  .ceo-section {
+    background: var(--bg-color);
+    padding: 80px 24px;
+  }
+
+  .ceo-grid {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .ceo-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: 40px;
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .ceo-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .ceo-image-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 24px;
+    border: 5px solid var(--primary-blue-50);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .ceo-card.academy .ceo-image-circle {
+    border-color: var(--secondary-orange-50);
+  }
+
+  .ceo-image-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* CEO Badge - Plain text, no background, no star */
+  .ceo-badge-label {
+    display: block;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 16px;
+    color: var(--primary-blue-dark);
+    padding: 0;
+    background: none;
+    border-radius: 0;
+  }
+
+  .ceo-badge-label svg {
+    display: none;
   }
 
   .ceo-quote {
-    font-size: 18px;
-    line-height: 1.9;
-    margin: 24px 0;
-    color: rgba(255, 255, 255, 0.95);
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 20px 0;
+    color: var(--text-secondary);
     font-weight: 500;
-    position: relative;
-    padding-right: 30px;
-    border-right: 3px solid var(--secondary-orange);
+    padding: 20px;
+    background: var(--bg-color);
+    border-radius: var(--radius-md);
+    border-right: 3px solid var(--primary-blue);
+  }
+
+  .ceo-card.academy .ceo-quote {
+    border-right-color: var(--secondary-orange);
   }
 
   .ceo-name {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 900;
+    color: var(--text-primary);
     margin-bottom: 4px;
   }
 
   .ceo-title-text {
-    font-size: 16px;
-    color: var(--secondary-orange-light);
+    font-size: 14px;
+    color: var(--text-muted);
     font-weight: 600;
   }
 
@@ -928,25 +1079,14 @@
     margin: 0 auto;
     background: white;
     border-radius: var(--radius-xl);
-    padding: 60px;
+    padding: 50px;
     box-shadow: var(--shadow-lg);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 50px;
     align-items: center;
     position: relative;
     overflow: hidden;
-  }
-
-  .download-container::before {
-    content: '';
-    position: absolute;
-    top: -100px;
-    left: -100px;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(13, 71, 161, 0.05) 0%, transparent 70%);
-    border-radius: 50%;
   }
 
   .download-content {
@@ -955,34 +1095,34 @@
   }
 
   .download-title {
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 900;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     color: var(--text-primary);
   }
 
   .download-desc {
-    font-size: 16px;
+    font-size: 15px;
     color: var(--text-secondary);
-    margin-bottom: 32px;
-    line-height: 1.8;
+    margin-bottom: 28px;
+    line-height: 1.7;
   }
 
   .download-buttons {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 14px;
   }
 
   .download-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-    padding: 18px 32px;
+    gap: 10px;
+    padding: 16px 28px;
     border-radius: 100px;
     font-weight: 800;
-    font-size: 17px;
+    font-size: 16px;
     text-decoration: none;
     cursor: pointer;
     border: none;
@@ -992,8 +1132,8 @@
   }
 
   .download-btn svg {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
   }
 
   .download-btn.android {
@@ -1036,7 +1176,7 @@
   .footer {
     background: var(--text-primary);
     color: white;
-    padding: 60px 24px 24px;
+    padding: 50px 24px 20px;
   }
 
   .footer-container {
@@ -1048,22 +1188,22 @@
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 36px;
   }
 
   .footer-brand {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
 
   .footer-brand img {
-    height: 40px;
+    height: 36px;
   }
 
   .footer-brand-text {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 800;
   }
 
@@ -1083,22 +1223,22 @@
   }
 
   .footer-academy span {
-    font-size: 13px;
+    font-size: 12px;
     color: rgba(255, 255, 255, 0.8);
     font-weight: 600;
   }
 
   .footer-desc {
     color: rgba(255, 255, 255, 0.6);
-    font-size: 14px;
-    line-height: 1.8;
+    font-size: 13px;
+    line-height: 1.7;
     max-width: 320px;
   }
 
   .footer-title {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 800;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     color: white;
   }
 
@@ -1107,13 +1247,13 @@
   }
 
   .footer-links li {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
   .footer-links a {
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
-    font-size: 14px;
+    font-size: 13px;
     transition: color 0.2s ease;
   }
 
@@ -1123,7 +1263,7 @@
 
   .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 24px;
+    padding-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1133,18 +1273,18 @@
 
   .footer-copyright {
     color: rgba(255, 255, 255, 0.5);
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .footer-social {
     display: flex;
-    gap: 12px;
+    gap: 10px;
   }
 
   .footer-social a {
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
     background: rgba(255, 255, 255, 0.1);
     display: flex;
     align-items: center;
@@ -1159,21 +1299,24 @@
   }
 
   .footer-social svg {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
   }
 
   /* Responsive */
   @media (max-width: 1024px) {
     .hero-cover {
-      height: 500px;
+      height: 480px;
     }
 
     .about-grid,
-    .ceo-container,
     .download-container {
       grid-template-columns: 1fr;
       gap: 40px;
+    }
+
+    .ceo-grid {
+      grid-template-columns: 1fr;
     }
 
     .gallery-grid {
@@ -1186,34 +1329,7 @@
   }
 
   @media (max-width: 768px) {
-    .academy-bar {
-      font-size: 11px;
-      padding: 8px 16px;
-    }
-
     .nav-links {
-      display: none;
-      position: absolute;
-      top: 100%;
-      right: 0;
-      left: 0;
-      background: white;
-      flex-direction: column;
-      padding: 24px;
-      gap: 20px;
-      box-shadow: var(--shadow-lg);
-      border-top: 1px solid var(--border-color);
-    }
-
-    .nav-links.active {
-      display: flex;
-    }
-
-    .nav-divider {
-      display: none;
-    }
-
-    .nav-academy-logo {
       display: none;
     }
 
@@ -1221,20 +1337,33 @@
       display: block;
     }
 
+    .lang-selector-desktop {
+      display: none;
+    }
+
     .hero-cover {
-      height: 450px;
+      height: 440px;
     }
 
     .hero-title {
-      font-size: 32px;
+      font-size: 28px;
     }
 
-    .hero-stats {
-      gap: 24px;
+    .hero-subtitle {
+      font-size: 15px;
+    }
+
+    .stats-container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
     }
 
     .stat-number {
-      font-size: 24px;
+      font-size: 26px;
+    }
+
+    .stat-label {
+      font-size: 13px;
     }
 
     .section {
@@ -1246,16 +1375,11 @@
     }
 
     .download-container {
-      padding: 32px 24px;
+      padding: 28px 20px;
     }
 
     .footer-grid {
       grid-template-columns: 1fr;
-    }
-
-    .about-image-badge {
-      position: static;
-      margin-top: 20px;
     }
 
     .hero-actions {
@@ -1266,12 +1390,32 @@
       justify-content: center;
     }
 
-    .nav-actions {
-      gap: 8px;
+    .academy-logo-wrapper {
+      padding: 30px 20px;
     }
 
-    .lang-btn span.lang-text {
-      display: none;
+    .academy-logo-circle {
+      width: 100px;
+      height: 100px;
+    }
+
+    .yadwor-logo-circle {
+      width: 80px;
+      height: 80px;
+      margin-right: -25px;
+    }
+
+    .academy-logo-text {
+      font-size: 18px;
+    }
+
+    .ceo-image-circle {
+      width: 150px;
+      height: 150px;
+    }
+
+    .ceo-card {
+      padding: 30px 24px;
     }
   }
 
@@ -1280,27 +1424,28 @@
       height: 400px;
     }
 
-    .hero-badges {
-      flex-direction: column;
-      align-items: stretch;
-    }
-
-    .hero-badge {
-      justify-content: center;
-    }
-
     .section-title {
-      font-size: 26px;
+      font-size: 24px;
     }
 
     .download-title {
-      font-size: 28px;
+      font-size: 26px;
     }
 
-    .ceo-badge {
-      position: static;
-      margin-top: 16px;
-      display: inline-flex;
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .honors-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .stats-section {
+      padding: 24px 16px;
+    }
+
+    .stat-number {
+      font-size: 22px;
     }
   }
 
@@ -1319,40 +1464,34 @@
 </head>
 <body>
 
-<!-- Academy Top Bar -->
-<div class="academy-bar">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-  <span>منصة YADWOR التعليمية — إحدى المبادرات الرقمية الرائدة التابعة لأكاديمية النجاح والتقدم التعليمي</span>
-</div>
-
-<!-- Navigation -->
+<!-- Slim Navigation -->
 <nav class="navbar">
   <div class="nav-container">
     <a href="#" class="nav-brand">
       <div class="nav-logo-wrap">
         <img src="Yadwor.png" alt="Yadwor Logo">
-        <span class="nav-logo-text">يادور</span>
+        <span class="nav-logo-text" data-i18n="navLogo">يادور</span>
       </div>
-      <div class="nav-divider"></div>
-      <img src="aspe.png" alt="أكاديمية النجاح والتقدم التعليمي" class="nav-academy-logo">
     </a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about">عن المنصة</a></li>
-      <li><a href="#features">المميزات</a></li>
-      <li><a href="#gallery">المجتمع</a></li>
-      <li><a href="#ceo">الرئيس التنفيذي</a></li>
-      <li><a href="#download" class="nav-cta">تحميل التطبيق</a></li>
+    <ul class="nav-links">
+      <li><a href="#about" data-i18n="navAbout">عن المنصة</a></li>
+      <li><a href="#features" data-i18n="navFeatures">المميزات</a></li>
+      <li><a href="#gallery" data-i18n="navCommunity">المجتمع</a></li>
+      <li><a href="#honors" data-i18n="navHonors">التكريمات</a></li>
+      <li><a href="#ceo" data-i18n="navCEO">الرؤساء التنفيذيون</a></li>
+      <li><a href="#download" class="nav-cta" data-i18n="navDownload">تحميل التطبيق</a></li>
     </ul>
     <div class="nav-actions">
-      <div class="lang-selector">
+      <!-- Desktop Language Selector -->
+      <div class="lang-selector lang-selector-desktop">
         <button class="lang-btn" id="langBtn" aria-label="تغيير اللغة">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          <span class="lang-text">العربية</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;"><polyline points="6 9 12 15 18 9"/></svg>
+          <span class="lang-text" id="currentLangText">العربية</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="lang-dropdown" id="langDropdown">
           <div class="lang-option active" data-lang="ar">
-            <span>🇲🇦</span>
+            <span>🇲</span>
             <span>العربية</span>
           </div>
           <div class="lang-option" data-lang="en">
@@ -1376,59 +1515,112 @@
   </div>
 </nav>
 
-<!-- Hero Section - Cover Style -->
+<!-- Side Menu -->
+<div class="side-menu-overlay" id="sideMenuOverlay"></div>
+<div class="side-menu" id="sideMenu">
+  <div class="side-menu-header">
+    <div class="side-menu-title" data-i18n="menuTitle">القائمة</div>
+    <button class="side-menu-close" id="sideMenuClose">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+  <ul class="side-menu-links">
+    <li><a href="#about" data-i18n="navAbout">عن المنصة</a></li>
+    <li><a href="#features" data-i18n="navFeatures">المميزات</a></li>
+    <li><a href="#gallery" data-i18n="navCommunity">المجتمع</a></li>
+    <li><a href="#honors" data-i18n="navHonors">التكريمات</a></li>
+    <li><a href="#ceo" data-i18n="navCEO">الرؤساء التنفيذيون</a></li>
+    <li><a href="#download" data-i18n="navDownload">تحميل التطبيق</a></li>
+  </ul>
+  <div class="side-menu-lang">
+    <div class="side-menu-lang-title" data-i18n="langTitle">اللغة</div>
+    <div class="side-menu-lang-options">
+      <div class="side-menu-lang-option active" data-lang="ar">
+        <span>🇲🇦</span>
+        <span>العربية</span>
+      </div>
+      <div class="side-menu-lang-option" data-lang="en">
+        <span>🇬🇧</span>
+        <span>English</span>
+      </div>
+      <div class="side-menu-lang-option" data-lang="fr">
+        <span>🇫🇷</span>
+        <span>Français</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hero Section -->
 <section class="hero">
   <div class="hero-cover">
-    <img src="https://image.qwenlm.ai/public_source/865248f4-cbf2-49d0-88cb-45e5086841b0/1bc346a01-dc40-4a74-922b-995b7a5be2a8.png" alt="طلاب من جنسيات مختلفة يتعلمون معاً">
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&h=900&fit=crop" alt="طلاب يتعلمون">
     <div class="hero-overlay">
       <div class="hero-content">
-        <div class="hero-badges">
-          <div class="hero-badge">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-            أكاديمية النجاح والتقدم التعليمي
-          </div>
-          <div class="hero-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-            منصة YADWOR التعليمية
-          </div>
-        </div>
         <h1 class="hero-title">
-          تعلّم بذكاء مع
-          <span class="highlight">يادور</span>
+          <span data-i18n="heroTitle1">تعلّم بذكاء مع</span>
+          <span class="highlight" data-i18n="heroTitle2">يادور</span>
         </h1>
-        <p class="hero-subtitle">
+        <p class="hero-subtitle" data-i18n="heroSubtitle">
           فضاء تعليمي متكامل يجمع التلاميذ والأساتذة والمؤسسات التعليمية والخبراء في بيئة آمنة ومنظمة وتفاعلية
         </p>
         <div class="hero-actions">
           <a href="#download" class="btn btn-primary">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            تحميل التطبيق
+            <span data-i18n="btnDownload">تحميل التطبيق</span>
           </a>
           <a href="#about" class="btn btn-white">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
-            اكتشف المنصة
+            <span data-i18n="btnDiscover">اكتشف المنصة</span>
           </a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat-item">
-            <span class="stat-number">+50K</span>
-            <span class="stat-label">طالب نشط</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">+1200</span>
-            <span class="stat-label">مدرس محترف</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">+5000</span>
-            <span class="stat-label">درس تفاعلي</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">+300</span>
-            <span class="stat-label">مؤسسة شريكة</span>
-          </div>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- Stats Section - White Background -->
+<section class="stats-section">
+  <div class="stats-container">
+    <div class="stat-item">
+      <span class="stat-number">+50K</span>
+      <span class="stat-label" data-i18n="statStudents">طالب نشط</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">+1200</span>
+      <span class="stat-label" data-i18n="statTeachers">مدرس محترف</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">+5000</span>
+      <span class="stat-label" data-i18n="statLessons">درس تفاعلي</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">+300</span>
+      <span class="stat-label" data-i18n="statInstitutions">مؤسسة شريكة</span>
+    </div>
+  </div>
+</section>
+
+<!-- Academy Logo Showcase -->
+<section class="academy-showcase">
+  <div class="academy-showcase-container reveal">
+    <div class="academy-logo-wrapper">
+      <div class="academy-logo-circle">
+        <img src="aspe.png" alt="أكاديمية النجاح والتقدم التعليمي" onerror="this.style.display='none'">
+      </div>
+      <div class="yadwor-logo-circle">
+        <img src="Yadwor.png" alt="Yadwor" onerror="this.style.display='none'">
+      </div>
+    </div>
+    <div class="academy-logo-text">
+      <span class="yadwor-name" data-i18n="yadworName">يادور</span>
+      <span data-i18n="andWord"> و</span>
+      <span data-i18n="academyName">أكاديمية النجاح والتقدم التعليمي</span>
+    </div>
+    <div class="academy-logo-subtext" data-i18n="academySlogan">نصنع المعرفة... ونبني مستقبل الأجيال</div>
   </div>
 </section>
 
@@ -1437,188 +1629,245 @@
   <div class="section-container">
     <div class="about-grid">
       <div class="about-content reveal">
-        <div class="about-academy-badge">
-          <img src="aspe.png" alt="أكاديمية النجاح والتقدم التعليمي">
-          <span>أكاديمية النجاح والتقدم التعليمي</span>
-        </div>
-        <h2>منصة <span class="highlight">YADWOR</span> التعليمية</h2>
-        <p class="about-text">
+        <h2><span data-i18n="aboutTitle1">منصة</span> <span class="highlight">YADWOR</span> <span data-i18n="aboutTitle2">التعليمية</span></h2>
+        <p class="about-text" data-i18n="aboutText1">
           إحدى المبادرات الرقمية الرائدة التابعة لأكاديمية النجاح والتقدم التعليمي. انطلاقًا من إيمان الأكاديمية بأهمية تطوير التعليم ومواكبة التحول الرقمي، تم إنشاء منصة YADWOR لتكون فضاءً تعليمياً متكاملاً يجمع بين التلاميذ والأساتذة والمؤسسات التعليمية والخبراء في بيئة آمنة، منظمة، وتفاعلية.
         </p>
-        <p class="about-text">
+        <p class="about-text" data-i18n="aboutText2">
           تسعى الأكاديمية من خلال منصة YADWOR إلى المساهمة في الارتقاء بجودة التعليم في المغرب، وتوفير وسائل تعليم حديثة تساعد التلاميذ على فهم الدروس بشكل أفضل، وتمنح الأساتذة والمؤسسات التعليمية أدوات متطورة لتقديم المحتوى التعليمي بطريقة احترافية.
         </p>
-        <p class="about-text">
+        <p class="about-text" data-i18n="aboutText3">
           توفر المنصة غرف بث مباشر تفاعلية تسمح للأساتذة بتقديم الدروس وشرحها باستخدام السبورة الرقمية، مع إمكانية تفاعل التلاميذ مباشرة عبر الميكروفون وطرح الأسئلة والمناقشة داخل الحصص التعليمية.
         </p>
         <div class="about-quote">
-          <p>نصنع المعرفة... ونبني مستقبل الأجيال.</p>
-          <div class="sub">أكاديمية النجاح والتقدم التعليمي</div>
+          <p data-i18n="aboutQuote">نصنع المعرفة... ونبني مستقبل الأجيال.</p>
+          <div class="sub" data-i18n="academyName">أكاديمية النجاح والتقدم التعليمي</div>
         </div>
       </div>
       <div class="about-image reveal">
-        <img src="https://image.qwenlm.ai/public_source/865248f4-cbf2-49d0-88cb-45e5086841b0/19236b0b0-3ee8-46a2-a932-c6b64bfc9912.png" alt="تطبيق يادور على الهاتف">
-        <div class="about-image-badge">
-          <div class="about-image-badge-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-          </div>
-          <div>
-            <div class="about-image-badge-text">منصة تعليمية متكاملة</div>
-            <div class="about-image-badge-sub">متاحة على جميع الأجهزة</div>
-          </div>
-        </div>
+        <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=800&h=600&fit=crop" alt="تعلم عن بعد">
       </div>
     </div>
   </div>
 </section>
 
 <!-- Features Section -->
-<section class="section" id="features" style="background: var(--bg-color);">
+<section class="section" id="features">
   <div class="section-container">
     <div class="section-header reveal">
       <div class="section-label">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-        لماذا يادور؟
+        <span data-i18n="featuresLabel">لماذا يادور؟</span>
       </div>
-      <h2 class="section-title">مميزات تجعل التعلم أسهل</h2>
-      <p class="section-subtitle">نقدم لك تجربة تعليمية متكاملة بأحدث التقنيات وأفضل المحتوى</p>
+      <h2 class="section-title" data-i18n="featuresTitle">مميزات تجعل التعلم أسهل</h2>
+      <p class="section-subtitle" data-i18n="featuresSubtitle">نقدم لك تجربة تعليمية متكاملة بأحدث التقنيات وأفضل المحتوى</p>
     </div>
     <div class="features-grid">
       <div class="feature-card reveal">
         <div class="feature-icon blue">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
         </div>
-        <h3 class="feature-title">محتوى تعليمي غني</h3>
-        <p class="feature-desc">آلاف الدروس والمحاضرات المسجلة بأعلى جودة من أفضل المدرسين في مختلف التخصصات</p>
+        <h3 class="feature-title" data-i18n="feature1Title">محتوى تعليمي غني</h3>
+        <p class="feature-desc" data-i18n="feature1Desc">آلاف الدروس والمحاضرات المسجلة بأعلى جودة من أفضل المدرسين في مختلف التخصصات</p>
       </div>
       <div class="feature-card reveal">
         <div class="feature-icon orange">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
         </div>
-        <h3 class="feature-title">تعلم تفاعلي</h3>
-        <p class="feature-desc">حصص مباشرة وتفاعلية مع المدرسين مع إمكانية طرح الأسئلة والمشاركة الفورية</p>
+        <h3 class="feature-title" data-i18n="feature2Title">تعلم تفاعلي</h3>
+        <p class="feature-desc" data-i18n="feature2Desc">حصص مباشرة وتفاعلية مع المدرسين مع إمكانية طرح الأسئلة والمشاركة الفورية</p>
       </div>
       <div class="feature-card reveal">
         <div class="feature-icon blue">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         </div>
-        <h3 class="feature-title">دعم متواصل</h3>
-        <p class="feature-desc">فريق دعم فني متخصص على مدار الساعة لمساعدتك في أي وقت وحل جميع مشاكلك</p>
+        <h3 class="feature-title" data-i18n="feature3Title">دعم متواصل</h3>
+        <p class="feature-desc" data-i18n="feature3Desc">فريق دعم فني متخصص على مدار الساعة لمساعدتك في أي وقت وحل جميع مشاكلك</p>
       </div>
       <div class="feature-card reveal">
         <div class="feature-icon orange">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
         </div>
-        <h3 class="feature-title">تتبع التقدم</h3>
-        <p class="feature-desc">نظام متقدم لتتبع تقدمك الدراسي وتحليل أدائك مع تقارير مفصلة وواضحة</p>
+        <h3 class="feature-title" data-i18n="feature4Title">تتبع التقدم</h3>
+        <p class="feature-desc" data-i18n="feature4Desc">نظام متقدم لتتبع تقدمك الدراسي وتحليل أدائك مع تقارير مفصلة وواضحة</p>
       </div>
       <div class="feature-card reveal">
         <div class="feature-icon blue">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         </div>
-        <h3 class="feature-title">مدرسون محترفون</h3>
-        <p class="feature-desc">نخبة من أفضل المدرسين والخبراء في مجالاتهم مع خبرة تعليمية واسعة ومتميزة</p>
+        <h3 class="feature-title" data-i18n="feature5Title">مدرسون محترفون</h3>
+        <p class="feature-desc" data-i18n="feature5Desc">نخبة من أفضل المدرسين والخبراء في مجالاتهم مع خبرة تعليمية واسعة ومتميزة</p>
       </div>
       <div class="feature-card reveal">
         <div class="feature-icon orange">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
         </div>
-        <h3 class="feature-title">تطبيق متكامل</h3>
-        <p class="feature-desc">تطبيق سلس وسهل الاستخدام يعمل على جميع الأجهزة بتجربة مستخدم احترافية</p>
+        <h3 class="feature-title" data-i18n="feature6Title">تطبيق متكامل</h3>
+        <p class="feature-desc" data-i18n="feature6Desc">تطبيق سلس وسهل الاستخدام يعمل على جميع الأجهزة بتجربة مستخدم احترافية</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Gallery Section - Always Visible Details -->
+<!-- Gallery Section -->
 <section class="section gallery-section" id="gallery">
   <div class="section-container">
     <div class="section-header reveal">
       <div class="section-label">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        مجتمع يادور
+        <span data-i18n="galleryLabel">مجتمع يادور</span>
       </div>
-      <h2 class="section-title">عائلتنا التعليمية المتنوعة</h2>
-      <p class="section-subtitle">نفتخر بخدمة جميع فئات المجتمع التعليمي من طلاب ومعلمين ومحترفين</p>
+      <h2 class="section-title" data-i18n="galleryTitle">عائلتنا التعليمية المتنوعة</h2>
+      <p class="section-subtitle" data-i18n="gallerySubtitle">نفتخر بخدمة جميع فئات المجتمع التعليمي من طلاب ومعلمين ومحترفين</p>
     </div>
     <div class="gallery-grid">
       <div class="gallery-card reveal">
         <div class="gallery-image">
-          <img src="https://image.qwenlm.ai/public_source/865248f4-cbf2-49d0-88cb-45e5086841b0/1c930af9f-0ffc-4080-a6ae-02e1ef8b7a76.png" alt="مؤسسات تعليمية">
+          <img src="https://images.unsplash.com/photo-1523050855017-d6f3b958b1b8?w=600&h=450&fit=crop" alt="مؤسسة تعليمية مع طلاب">
         </div>
         <div class="gallery-info">
-          <div class="gallery-info-title">سعادة المؤسسات</div>
-          <div class="gallery-info-desc">شركاؤنا في النجاح والتميز التعليمي، نوفر لهم أدوات متطورة لتقديم المحتوى</div>
+          <div class="gallery-info-title" data-i18n="gallery1Title">المؤسسات التعليمية</div>
+          <div class="gallery-info-desc" data-i18n="gallery1Desc">شركاؤنا في النجاح والتميز التعليمي، نوفر لهم أدوات متطورة لتقديم المحتوى</div>
           <div class="gallery-tag">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            مؤسسات تعليمية
+            <span data-i18n="gallery1Tag">مؤسسات</span>
           </div>
         </div>
       </div>
       <div class="gallery-card reveal">
         <div class="gallery-image">
-          <img src="https://image.qwenlm.ai/public_source/865248f4-cbf2-49d0-88cb-45e5086841b0/1975decfe-17c0-4dbe-8d30-cb19581a97b9.png" alt="التلاميذ">
+          <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=600&h=450&fit=crop" alt="تلاميذ في الفصل">
         </div>
         <div class="gallery-info">
-          <div class="gallery-info-title">التلاميذ</div>
-          <div class="gallery-info-desc">مستقبلنا المشرق، نوفر لهم بيئة تعلم تفاعلية وآمنة تساعدهم على التفوق</div>
+          <div class="gallery-info-title" data-i18n="gallery2Title">التلاميذ</div>
+          <div class="gallery-info-desc" data-i18n="gallery2Desc">مستقبلنا المشرق، نوفر لهم بيئة تعلم تفاعلية وآمنة تساعدهم على التفوق</div>
           <div class="gallery-tag">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-            طلاب
+            <span data-i18n="gallery2Tag">طلاب</span>
           </div>
         </div>
       </div>
       <div class="gallery-card reveal">
         <div class="gallery-image">
-          <img src="https://image.qwenlm.ai/public_source/865248f4-cbf2-49d0-88cb-45e5086841b0/1e36ea32e-2e58-4764-9302-3712bb3810d2.png" alt="مؤثر تعلمي">
+          <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=600&h=450&fit=crop" alt="مؤثر تعليمي يصنع محتوى">
         </div>
         <div class="gallery-info">
-          <div class="gallery-info-title">مؤثر تعلمي</div>
-          <div class="gallery-info-desc">نشر المعرفة والإلهام عبر المحتوى التعليمي الهادف والمتميز</div>
+          <div class="gallery-info-title" data-i18n="gallery3Title">المؤثرون التعليميون</div>
+          <div class="gallery-info-desc" data-i18n="gallery3Desc">نشر المعرفة والإلهام عبر المحتوى التعليمي الهادف والمتميز</div>
           <div class="gallery-tag">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
-            محتوى رقمي
+            <span data-i18n="gallery3Tag">محتوى رقمي</span>
           </div>
         </div>
       </div>
       <div class="gallery-card reveal">
         <div class="gallery-image">
-          <img src="https://image.qwenlm.ai/public_source/865248f4-cbf2-49d0-88cb-45e5086841b0/1b6f1b27a-ed91-4fb8-9e4e-39328e72c3be.png" alt="مقدم محاضرات">
+          <img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=600&h=450&fit=crop" alt="محاضرة عن بعد">
         </div>
         <div class="gallery-info">
-          <div class="gallery-info-title">مقدم محاضرات</div>
-          <div class="gallery-info-desc">خبرة ومعرفة واسعة في تقديم المحتوى التعليمي بطريقة احترافية</div>
+          <div class="gallery-info-title" data-i18n="gallery4Title">مقدمو المحاضرات</div>
+          <div class="gallery-info-desc" data-i18n="gallery4Desc">خبرة ومعرفة واسعة في تقديم المحتوى التعليمي بطريقة احترافية عن بعد</div>
           <div class="gallery-tag">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-            محاضرات
+            <span data-i18n="gallery4Tag">محاضرات</span>
           </div>
         </div>
       </div>
       <div class="gallery-card reveal">
         <div class="gallery-image">
-          <img src="https://image.qwenlm.ai/public_source/865248f4-cbf2-49d0-88cb-45e5086841b0/1d8fe1417-b39f-40ae-a007-e8a54b724424.png" alt="مهندسة">
+          <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=450&fit=crop" alt="مهندس يعمل">
         </div>
         <div class="gallery-info">
-          <div class="gallery-info-title">مهندسة</div>
-          <div class="gallery-info-desc">ابتكار وتطوير مستمر في مجال الهندسة والتقنية الحديثة</div>
+          <div class="gallery-info-title" data-i18n="gallery5Title">المهندسون</div>
+          <div class="gallery-info-desc" data-i18n="gallery5Desc">ابتكار وتطوير مستمر في مجال الهندسة والتقنية الحديثة</div>
           <div class="gallery-tag">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-            هندسة
+            <span data-i18n="gallery5Tag">هندسة</span>
           </div>
         </div>
       </div>
       <div class="gallery-card reveal">
         <div class="gallery-image">
-          <img src="https://image.qwenlm.ai/public_source/865248f4-cbf2-49d0-88cb-45e5086841b0/1bf68157e-b6a3-40c2-8721-559e7a433002.png" alt="دكتور">
+          <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=600&h=450&fit=crop" alt="دكتور في مكتبه">
         </div>
         <div class="gallery-info">
-          <div class="gallery-info-title">دكتور</div>
-          <div class="gallery-info-desc">تميز في التخصص الأكاديمي والبحث العلمي والمساهمة في بناء المعرفة</div>
+          <div class="gallery-info-title" data-i18n="gallery6Title">الدكاترة</div>
+          <div class="gallery-info-desc" data-i18n="gallery6Desc">تميز في التخصص الأكاديمي والبحث العلمي والمساهمة في بناء المعرفة</div>
           <div class="gallery-tag">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-            أكاديمي
+            <span data-i18n="gallery6Tag">أكاديمي</span>
           </div>
         </div>
+      </div>
+      <div class="gallery-card reveal">
+        <div class="gallery-image">
+          <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&h=450&fit=crop" alt="مدرب في قاعة تدريب">
+        </div>
+        <div class="gallery-info">
+          <div class="gallery-info-title" data-i18n="gallery7Title">مقدمو الدورات التكوينية</div>
+          <div class="gallery-info-desc" data-i18n="gallery7Desc">خبراء في تقديم الدورات التدريبية والتكوينية لتطوير المهارات المهنية</div>
+          <div class="gallery-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span data-i18n="gallery7Tag">تكوين</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-card reveal">
+        <div class="gallery-image">
+          <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600&h=450&fit=crop" alt="أستاذ يدرس">
+        </div>
+        <div class="gallery-info">
+          <div class="gallery-info-title" data-i18n="gallery8Title">الأساتذة والمعلمون</div>
+          <div class="gallery-info-desc" data-i18n="gallery8Desc">نخبة من المدرسين المحترفين الذين يكرسون جهودهم لبناء جيل متعلم وواعٍ</div>
+          <div class="gallery-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span data-i18n="gallery8Tag">تعليم</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Honors Section -->
+<section class="section honors-section" id="honors">
+  <div class="section-container">
+    <div class="section-header reveal">
+      <div class="section-label">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+        <span data-i18n="honorsLabel">التكريمات والفعاليات</span>
+      </div>
+      <h2 class="section-title" data-i18n="honorsTitle">نكرم المتميزين ونحتفي بالنجاح</h2>
+      <p class="section-subtitle" data-i18n="honorsSubtitle">ننظم فعاليات ومهرجانات لتكريم كل من يساهم في نشر المعرفة وبناء مستقبل أفضل</p>
+    </div>
+    <div class="honors-grid">
+      <div class="honor-card reveal">
+        <div class="honor-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </div>
+        <h3 class="honor-title" data-i18n="honor1Title">تكريم التلاميذ المتفوقين</h3>
+        <p class="honor-desc" data-i18n="honor1Desc">نحتفي بالتلاميذ المتميزين دراسياً ونكرمهم في حفلات خاصة تقديراً لجهودهم وتفوقهم الأكاديمي</p>
+      </div>
+      <div class="honor-card reveal">
+        <div class="honor-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <h3 class="honor-title" data-i18n="honor2Title">تكريم المدرسين المبدعين</h3>
+        <p class="honor-desc" data-i18n="honor2Desc">نكرم الأساتذة والمدرسين الذين يبذلون جهوداً استثنائية في التعليم ويساهمون في بناء أجيال متعلمة</p>
+      </div>
+      <div class="honor-card reveal">
+        <div class="honor-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3 class="honor-title" data-i18n="honor3Title">مهرجانات التعليم والابتكار</h3>
+        <p class="honor-desc" data-i18n="honor3Desc">ننظم مهرجانات سنوية في مختلف المدن المغربية لتكريم صناع المحتوى التعليمي والمبادرات المتميزة</p>
+      </div>
+      <div class="honor-card reveal">
+        <div class="honor-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3 class="honor-title" data-i18n="honor4Title">جوائز التميز التعليمي</h3>
+        <p class="honor-desc" data-i18n="honor4Desc">نمنح جوائز سنوية للمؤسسات التعليمية والأفراد الذين يحققون إنجازات بارزة في مجال التعليم</p>
       </div>
     </div>
   </div>
@@ -1626,25 +1875,38 @@
 
 <!-- CEO Section -->
 <section class="section ceo-section" id="ceo">
-  <div class="ceo-container">
-    <div class="ceo-image-wrapper reveal">
-      <img src="https://image.qwenlm.ai/public_source/865248f4-cbf2-49d0-88cb-45e5086841b0/1a33ae341-9570-44af-92fa-61e88a35eb30.png" alt="Hassan Faraji - CEO" class="ceo-image">
-      <div class="ceo-badge">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        CEO & Founder
-      </div>
-    </div>
-    <div class="ceo-content reveal">
+  <div class="section-container">
+    <div class="section-header reveal">
       <div class="section-label">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        كلمة الرئيس التنفيذي
+        <span data-i18n="ceoLabel">القيادة</span>
       </div>
-      <h2 class="section-title">رؤيتنا نحو مستقبل تعليمي أفضل</h2>
-      <p class="ceo-quote">
-        "نؤمن بأن التعليم هو الأساس الذي تُبنى عليه الأمم، ومنصة YADWOR هي ثمرة رؤيتنا لتقديم تجربة تعليمية متكاملة تجمع بين التكنولوجيا الحديثة والمحتوى التعليمي الراقي. نهدف إلى تمكين كل طالب من تحقيق أحلامه ومساعدته على الوصول إلى أقصى إمكاناته."
-      </p>
-      <div class="ceo-name">Hassan Faraji</div>
-      <div class="ceo-title-text">الرئيس التنفيذي - منصة YADWOR</div>
+      <h2 class="section-title" data-i18n="ceoTitle">الرؤساء التنفيذيون</h2>
+      <p class="section-subtitle" data-i18n="ceoSubtitle">قادة يقودون مسيرتنا نحو التميز التعليمي</p>
+    </div>
+    <div class="ceo-grid">
+      <div class="ceo-card reveal">
+        <div class="ceo-image-circle">
+          <img src="Hassan.png" alt="Hassan Faraji">
+        </div>
+        <div class="ceo-badge-label" data-i18n="ceoYadworBadge">CEO & Founder - YADWOR</div>
+        <p class="ceo-quote" data-i18n="ceoYadworQuote">
+          "نؤمن بأن التعليم هو الأساس الذي تُبنى عليه الأمم، ومنصة YADWOR هي ثمرة رؤيتنا لتقديم تجربة تعليمية متكاملة تجمع بين التكنولوجيا الحديثة والمحتوى التعليمي الراقي. نهدف إلى تمكين كل طالب من تحقيق أحلامه."
+        </p>
+        <div class="ceo-name">Hassan Faraji</div>
+        <div class="ceo-title-text" data-i18n="ceoYadworTitle">الرئيس التنفيذي - منصة YADWOR</div>
+      </div>
+      <div class="ceo-card academy reveal">
+        <div class="ceo-image-circle">
+          <img src="Said.png" alt="Said ben adou">
+        </div>
+        <div class="ceo-badge-label" data-i18n="ceoAcademyBadge">CEO - أكاديمية النجاح والتقدم التعليمي</div>
+        <p class="ceo-quote" data-i18n="ceoAcademyQuote">
+          "انطلاقاً من إيماننا بأهمية تطوير التعليم ومواكبة التحول الرقمي، أسسنا أكاديمية النجاح والتقدم التعليمي لتكون منارة للعلم والمعرفة. نسعى لبناء جيل واعٍ وقادر على مواجهة تحديات المستقبل."
+        </p>
+        <div class="ceo-name">Said ben adou</div>
+        <div class="ceo-title-text" data-i18n="ceoAcademyTitle">الرئيس التنفيذي - أكاديمية النجاح والتقدم التعليمي</div>
+      </div>
     </div>
   </div>
 </section>
@@ -1656,25 +1918,25 @@
       <div class="download-content">
         <div class="section-label">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          ابدأ الآن
+          <span data-i18n="downloadLabel">ابدأ الآن</span>
         </div>
-        <h2 class="download-title">حمّل تطبيق يادور الآن</h2>
-        <p class="download-desc">
+        <h2 class="download-title" data-i18n="downloadTitle">حمّل تطبيق يادور الآن</h2>
+        <p class="download-desc" data-i18n="downloadDesc">
           انضم إلى آلاف الطلاب والمعلمين الذين يستخدمون منصة YADWOR يومياً. تطبيقنا متاح على جميع الأجهزة بتجربة سلسة واحترافية.
         </p>
         <div class="download-buttons">
           <a href="#" class="download-btn android">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            تحميل للأندرويد
+            <span data-i18n="downloadAndroid">تحميل للأندرويد</span>
           </a>
           <a href="#" class="download-btn ios">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            تحميل للـ iOS
+            <span data-i18n="downloadIOS">تحميل للـ iOS</span>
           </a>
         </div>
       </div>
       <div class="download-image">
-        <img src="https://image.qwenlm.ai/public_source/865248f4-cbf2-49d0-88cb-45e5086841b0/19236b0b0-3ee8-46a2-a932-c6b64bfc9912.png" alt="تطبيق يادور">
+        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=500&fit=crop" alt="تطبيق يادور">
       </div>
     </div>
   </div>
@@ -1687,47 +1949,48 @@
       <div>
         <div class="footer-brand">
           <img src="Yadwor.png" alt="Yadwor">
-          <span class="footer-brand-text">يادور</span>
+          <span class="footer-brand-text" data-i18n="navLogo">يادور</span>
         </div>
-        <p class="footer-desc">
+        <p class="footer-desc" data-i18n="footerDesc">
           منصة تعليمية من أجل تعليم أفضل، ومجتمع أكثر وعيًا وتقدمًا. إحدى المبادرات الرقمية الرائدة التابعة لأكاديمية النجاح والتقدم التعليمي.
         </p>
         <div class="footer-academy">
-          <img src="aspe.png" alt="أكاديمية النجاح والتقدم التعليمي">
-          <span>أكاديمية النجاح والتقدم التعليمي</span>
+          <img src="aspe.png" alt="أكاديمية النجاح والتقدم التعليمي" onerror="this.style.display='none'">
+          <span data-i18n="academyName">أكاديمية النجاح والتقدم التعليمي</span>
         </div>
       </div>
       <div>
-        <h4 class="footer-title">روابط سريعة</h4>
+        <h4 class="footer-title" data-i18n="footerLinks">روابط سريعة</h4>
         <ul class="footer-links">
-          <li><a href="#about">عن المنصة</a></li>
-          <li><a href="#features">المميزات</a></li>
-          <li><a href="#gallery">المجتمع</a></li>
-          <li><a href="#ceo">الرئيس التنفيذي</a></li>
-          <li><a href="#download">تحميل التطبيق</a></li>
+          <li><a href="#about" data-i18n="navAbout">عن المنصة</a></li>
+          <li><a href="#features" data-i18n="navFeatures">المميزات</a></li>
+          <li><a href="#gallery" data-i18n="navCommunity">المجتمع</a></li>
+          <li><a href="#honors" data-i18n="navHonors">التكريمات</a></li>
+          <li><a href="#ceo" data-i18n="navCEO">الرؤساء التنفيذيون</a></li>
+          <li><a href="#download" data-i18n="navDownload">تحميل التطبيق</a></li>
         </ul>
       </div>
       <div>
-        <h4 class="footer-title">الدعم</h4>
+        <h4 class="footer-title" data-i18n="footerSupport">الدعم</h4>
         <ul class="footer-links">
-          <li><a href="#">مركز المساعدة</a></li>
-          <li><a href="#">الأسئلة الشائعة</a></li>
-          <li><a href="#">تواصل معنا</a></li>
-          <li><a href="#">الشروط والأحكام</a></li>
-          <li><a href="#">سياسة الخصوصية</a></li>
+          <li><a href="#" data-i18n="footerHelp">مركز المساعدة</a></li>
+          <li><a href="#" data-i18n="footerFAQ">الأسئلة الشائعة</a></li>
+          <li><a href="#" data-i18n="footerContact">تواصل معنا</a></li>
+          <li><a href="#" data-i18n="footerTerms">الشروط والأحكام</a></li>
+          <li><a href="#" data-i18n="footerPrivacy">سياسة الخصوصية</a></li>
         </ul>
       </div>
       <div>
-        <h4 class="footer-title">تواصل معنا</h4>
+        <h4 class="footer-title" data-i18n="footerContactTitle">تواصل معنا</h4>
         <ul class="footer-links">
           <li><a href="#">contact@yadwor.com</a></li>
           <li><a href="#">+212 600 000 000</a></li>
-          <li><a href="#">المملكة المغربية</a></li>
+          <li><a href="#" data-i18n="footerMorocco">المملكة المغربية</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copyright">
+      <div class="footer-copyright" data-i18n="footerCopyright">
         © 2026 YADWOR - أكاديمية النجاح والتقدم التعليمي. جميع الحقوق محفوظة.
       </div>
       <div class="footer-social">
@@ -1749,54 +2012,391 @@
 </footer>
 
 <script>
-  // Navbar scroll effect
-  const navbar = document.querySelector('.navbar');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 20) {
-      navbar.style.boxShadow = 'var(--shadow-md)';
-    } else {
-      navbar.style.boxShadow = 'var(--shadow-sm)';
+  // Translations
+  const translations = {
+    ar: {
+      navLogo: 'يادور',
+      navAbout: 'عن المنصة',
+      navFeatures: 'المميزات',
+      navCommunity: 'المجتمع',
+      navHonors: 'التكريمات',
+      navCEO: 'الرؤساء التنفيذيون',
+      navDownload: 'تحميل التطبيق',
+      menuTitle: 'القائمة',
+      langTitle: 'اللغة',
+      heroTitle1: 'تعلّم بذكاء مع',
+      heroTitle2: 'يادور',
+      heroSubtitle: 'فضاء تعليمي متكامل يجمع التلاميذ والأساتذة والمؤسسات التعليمية والخبراء في بيئة آمنة ومنظمة وتفاعلية',
+      btnDownload: 'تحميل التطبيق',
+      btnDiscover: 'اكتشف المنصة',
+      statStudents: 'طالب نشط',
+      statTeachers: 'مدرس محترف',
+      statLessons: 'درس تفاعلي',
+      statInstitutions: 'مؤسسة شريكة',
+      yadworName: 'يادور',
+      andWord: ' و',
+      academyName: 'أكاديمية النجاح والتقدم التعليمي',
+      academySlogan: 'نصنع المعرفة... ونبني مستقبل الأجيال',
+      aboutTitle1: 'منصة',
+      aboutTitle2: 'التعليمية',
+      aboutText1: 'إحدى المبادرات الرقمية الرائدة التابعة لأكاديمية النجاح والتقدم التعليمي. انطلاقًا من إيمان الأكاديمية بأهمية تطوير التعليم ومواكبة التحول الرقمي، تم إنشاء منصة YADWOR لتكون فضاءً تعليمياً متكاملاً يجمع بين التلاميذ والأساتذة والمؤسسات التعليمية والخبراء في بيئة آمنة، منظمة، وتفاعلية.',
+      aboutText2: 'تسعى الأكاديمية من خلال منصة YADWOR إلى المساهمة في الارتقاء بجودة التعليم في المغرب، وتوفير وسائل تعليم حديثة تساعد التلاميذ على فهم الدروس بشكل أفضل، وتمنح الأساتذة والمؤسسات التعليمية أدوات متطورة لتقديم المحتوى التعليمي بطريقة احترافية.',
+      aboutText3: 'توفر المنصة غرف بث مباشر تفاعلية تسمح للأساتذة بتقديم الدروس وشرحها باستخدام السبورة الرقمية، مع إمكانية تفاعل التلاميذ مباشرة عبر الميكروفون وطرح الأسئلة والمناقشة داخل الحصص التعليمية.',
+      aboutQuote: 'نصنع المعرفة... ونبني مستقبل الأجيال.',
+      featuresLabel: 'لماذا يادور؟',
+      featuresTitle: 'مميزات تجعل التعلم أسهل',
+      featuresSubtitle: 'نقدم لك تجربة تعليمية متكاملة بأحدث التقنيات وأفضل المحتوى',
+      feature1Title: 'محتوى تعليمي غني',
+      feature1Desc: 'آلاف الدروس والمحاضرات المسجلة بأعلى جودة من أفضل المدرسين في مختلف التخصصات',
+      feature2Title: 'تعلم تفاعلي',
+      feature2Desc: 'حصص مباشرة وتفاعلية مع المدرسين مع إمكانية طرح الأسئلة والمشاركة الفورية',
+      feature3Title: 'دعم متواصل',
+      feature3Desc: 'فريق دعم فني متخصص على مدار الساعة لمساعدتك في أي وقت وحل جميع مشاكلك',
+      feature4Title: 'تتبع التقدم',
+      feature4Desc: 'نظام متقدم لتتبع تقدمك الدراسي وتحليل أدائك مع تقارير مفصلة وواضحة',
+      feature5Title: 'مدرسون محترفون',
+      feature5Desc: 'نخبة من أفضل المدرسين والخبراء في مجالاتهم مع خبرة تعليمية واسعة ومتميزة',
+      feature6Title: 'تطبيق متكامل',
+      feature6Desc: 'تطبيق سلس وسهل الاستخدام يعمل على جميع الأجهزة بتجربة مستخدم احترافية',
+      galleryLabel: 'مجتمع يادور',
+      galleryTitle: 'عائلتنا التعليمية المتنوعة',
+      gallerySubtitle: 'نفتخر بخدمة جميع فئات المجتمع التعليمي من طلاب ومعلمين ومحترفين',
+      gallery1Title: 'المؤسسات التعليمية',
+      gallery1Desc: 'شركاؤنا في النجاح والتميز التعليمي، نوفر لهم أدوات متطورة لتقديم المحتوى',
+      gallery1Tag: 'مؤسسات',
+      gallery2Title: 'التلاميذ',
+      gallery2Desc: 'مستقبلنا المشرق، نوفر لهم بيئة تعلم تفاعلية وآمنة تساعدهم على التفوق',
+      gallery2Tag: 'طلاب',
+      gallery3Title: 'المؤثرون التعليميون',
+      gallery3Desc: 'نشر المعرفة والإلهام عبر المحتوى التعليمي الهادف والمتميز',
+      gallery3Tag: 'محتوى رقمي',
+      gallery4Title: 'مقدمو المحاضرات',
+      gallery4Desc: 'خبرة ومعرفة واسعة في تقديم المحتوى التعليمي بطريقة احترافية عن بعد',
+      gallery4Tag: 'محاضرات',
+      gallery5Title: 'المهندسون',
+      gallery5Desc: 'ابتكار وتطوير مستمر في مجال الهندسة والتقنية الحديثة',
+      gallery5Tag: 'هندسة',
+      gallery6Title: 'الدكاترة',
+      gallery6Desc: 'تميز في التخصص الأكاديمي والبحث العلمي والمساهمة في بناء المعرفة',
+      gallery6Tag: 'أكاديمي',
+      gallery7Title: 'مقدمو الدورات التكوينية',
+      gallery7Desc: 'خبراء في تقديم الدورات التدريبية والتكوينية لتطوير المهارات المهنية',
+      gallery7Tag: 'تكوين',
+      gallery8Title: 'الأساتذة والمعلمون',
+      gallery8Desc: 'نخبة من المدرسين المحترفين الذين يكرسون جهودهم لبناء جيل متعلم وواعٍ',
+      gallery8Tag: 'تعليم',
+      honorsLabel: 'التكريمات والفعاليات',
+      honorsTitle: 'نكرم المتميزين ونحتفي بالنجاح',
+      honorsSubtitle: 'ننظم فعاليات ومهرجانات لتكريم كل من يساهم في نشر المعرفة وبناء مستقبل أفضل',
+      honor1Title: 'تكريم التلاميذ المتفوقين',
+      honor1Desc: 'نحتفي بالتلاميذ المتميزين دراسياً ونكرمهم في حفلات خاصة تقديراً لجهودهم وتفوقهم الأكاديمي',
+      honor2Title: 'تكريم المدرسين المبدعين',
+      honor2Desc: 'نكرم الأساتذة والمدرسين الذين يبذلون جهوداً استثنائية في التعليم ويساهمون في بناء أجيال متعلمة',
+      honor3Title: 'مهرجانات التعليم والابتكار',
+      honor3Desc: 'ننظم مهرجانات سنوية في مختلف المدن المغربية لتكريم صناع المحتوى التعليمي والمبادرات المتميزة',
+      honor4Title: 'جوائز التميز التعليمي',
+      honor4Desc: 'نمنح جوائز سنوية للمؤسسات التعليمية والأفراد الذين يحققون إنجازات بارزة في مجال التعليم',
+      ceoLabel: 'القيادة',
+      ceoTitle: 'الرؤساء التنفيذيون',
+      ceoSubtitle: 'قادة يقودون مسيرتنا نحو التميز التعليمي',
+      ceoYadworBadge: 'CEO & Founder - YADWOR',
+      ceoYadworQuote: '"نؤمن بأن التعليم هو الأساس الذي تُبنى عليه الأمم، ومنصة YADWOR هي ثمرة رؤيتنا لتقديم تجربة تعليمية متكاملة تجمع بين التكنولوجيا الحديثة والمحتوى التعليمي الراقي. نهدف إلى تمكين كل طالب من تحقيق أحلامه."',
+      ceoYadworTitle: 'الرئيس التنفيذي - منصة YADWOR',
+      ceoAcademyBadge: 'CEO - أكاديمية النجاح والتقدم التعليمي',
+      ceoAcademyQuote: '"انطلاقاً من إيماننا بأهمية تطوير التعليم ومواكبة التحول الرقمي، أسسنا أكاديمية النجاح والتقدم التعليمي لتكون منارة للعلم والمعرفة. نسعى لبناء جيل واعٍ وقادر على مواجهة تحديات المستقبل."',
+      ceoAcademyTitle: 'الرئيس التنفيذي - أكاديمية النجاح والتقدم التعليمي',
+      downloadLabel: 'ابدأ الآن',
+      downloadTitle: 'حمّل تطبيق يادور الآن',
+      downloadDesc: 'انضم إلى آلاف الطلاب والمعلمين الذين يستخدمون منصة YADWOR يومياً. تطبيقنا متاح على جميع الأجهزة بتجربة سلسة واحترافية.',
+      downloadAndroid: 'تحميل للأندرويد',
+      downloadIOS: 'تحميل للـ iOS',
+      footerDesc: 'منصة تعليمية من أجل تعليم أفضل، ومجتمع أكثر وعيًا وتقدمًا. إحدى المبادرات الرقمية الرائدة التابعة لأكاديمية النجاح والتقدم التعليمي.',
+      footerLinks: 'روابط سريعة',
+      footerSupport: 'الدعم',
+      footerHelp: 'مركز المساعدة',
+      footerFAQ: 'الأسئلة الشائعة',
+      footerContact: 'تواصل معنا',
+      footerTerms: 'الشروط والأحكام',
+      footerPrivacy: 'سياسة الخصوصية',
+      footerContactTitle: 'تواصل معنا',
+      footerMorocco: 'المملكة المغربية',
+      footerCopyright: '© 2026 YADWOR - أكاديمية النجاح والتقدم التعليمي. جميع الحقوق محفوظة.'
+    },
+    en: {
+      navLogo: 'Yadwor',
+      navAbout: 'About',
+      navFeatures: 'Features',
+      navCommunity: 'Community',
+      navHonors: 'Honors',
+      navCEO: 'CEOs',
+      navDownload: 'Download App',
+      menuTitle: 'Menu',
+      langTitle: 'Language',
+      heroTitle1: 'Learn Smart with',
+      heroTitle2: 'Yadwor',
+      heroSubtitle: 'A comprehensive educational space bringing together students, teachers, educational institutions, and experts in a safe, organized, and interactive environment',
+      btnDownload: 'Download App',
+      btnDiscover: 'Discover Platform',
+      statStudents: 'Active Students',
+      statTeachers: 'Professional Teachers',
+      statLessons: 'Interactive Lessons',
+      statInstitutions: 'Partner Institutions',
+      yadworName: 'Yadwor',
+      andWord: ' & ',
+      academyName: 'Success and Educational Progress Academy',
+      academySlogan: 'We create knowledge... and build the future of generations',
+      aboutTitle1: 'YADWOR',
+      aboutTitle2: 'Educational Platform',
+      aboutText1: 'One of the leading digital initiatives of the Success and Educational Progress Academy. Based on the Academy\'s belief in the importance of developing education and keeping pace with digital transformation, YADWOR platform was created to be a comprehensive educational space that brings together students, teachers, educational institutions, and experts in a safe, organized, and interactive environment.',
+      aboutText2: 'Through YADWOR platform, the Academy seeks to contribute to improving the quality of education in Morocco, providing modern educational tools that help students better understand lessons, and giving teachers and educational institutions advanced tools to deliver educational content professionally.',
+      aboutText3: 'The platform provides interactive live streaming rooms that allow teachers to deliver and explain lessons using digital whiteboards, with the ability for students to interact directly via microphone and ask questions and discuss within educational sessions.',
+      aboutQuote: 'We create knowledge... and build the future of generations.',
+      featuresLabel: 'Why Yadwor?',
+      featuresTitle: 'Features that make learning easier',
+      featuresSubtitle: 'We offer you a comprehensive educational experience with the latest technologies and the best content',
+      feature1Title: 'Rich Educational Content',
+      feature1Desc: 'Thousands of lessons and lectures recorded in the highest quality from the best teachers in various specialties',
+      feature2Title: 'Interactive Learning',
+      feature2Desc: 'Live and interactive sessions with teachers with the ability to ask questions and participate immediately',
+      feature3Title: 'Continuous Support',
+      feature3Desc: 'A specialized technical support team around the clock to help you at any time and solve all your problems',
+      feature4Title: 'Progress Tracking',
+      feature4Desc: 'An advanced system to track your academic progress and analyze your performance with detailed and clear reports',
+      feature5Title: 'Professional Teachers',
+      feature5Desc: 'An elite of the best teachers and experts in their fields with extensive and distinguished educational experience',
+      feature6Title: 'Comprehensive App',
+      feature6Desc: 'A smooth and easy-to-use application that works on all devices with a professional user experience',
+      galleryLabel: 'Yadwor Community',
+      galleryTitle: 'Our Diverse Educational Family',
+      gallerySubtitle: 'We are proud to serve all segments of the educational community from students, teachers, and professionals',
+      gallery1Title: 'Educational Institutions',
+      gallery1Desc: 'Our partners in success and educational excellence, we provide them with advanced tools to deliver content',
+      gallery1Tag: 'Institutions',
+      gallery2Title: 'Students',
+      gallery2Desc: 'Our bright future, we provide them with an interactive and safe learning environment that helps them excel',
+      gallery2Tag: 'Students',
+      gallery3Title: 'Educational Influencers',
+      gallery3Desc: 'Spreading knowledge and inspiration through purposeful and distinguished educational content',
+      gallery3Tag: 'Digital Content',
+      gallery4Title: 'Lecture Presenters',
+      gallery4Desc: 'Extensive experience and knowledge in delivering educational content professionally online',
+      gallery4Tag: 'Lectures',
+      gallery5Title: 'Engineers',
+      gallery5Desc: 'Continuous innovation and development in the field of engineering and modern technology',
+      gallery5Tag: 'Engineering',
+      gallery6Title: 'Doctors',
+      gallery6Desc: 'Excellence in academic specialization and scientific research and contributing to building knowledge',
+      gallery6Tag: 'Academic',
+      gallery7Title: 'Training Course Providers',
+      gallery7Desc: 'Experts in delivering training and development courses to develop professional skills',
+      gallery7Tag: 'Training',
+      gallery8Title: 'Teachers and Educators',
+      gallery8Desc: 'An elite of professional teachers who dedicate their efforts to building an educated and aware generation',
+      gallery8Tag: 'Education',
+      honorsLabel: 'Honors and Events',
+      honorsTitle: 'We honor the distinguished and celebrate success',
+      honorsSubtitle: 'We organize events and festivals to honor everyone who contributes to spreading knowledge and building a better future',
+      honor1Title: 'Honoring Outstanding Students',
+      honor1Desc: 'We celebrate academically distinguished students and honor them in special ceremonies in appreciation of their efforts and academic excellence',
+      honor2Title: 'Honoring Creative Teachers',
+      honor2Desc: 'We honor teachers and educators who make exceptional efforts in education and contribute to building educated generations',
+      honor3Title: 'Education and Innovation Festivals',
+      honor3Desc: 'We organize annual festivals in various Moroccan cities to honor educational content creators and distinguished initiatives',
+      honor4Title: 'Educational Excellence Awards',
+      honor4Desc: 'We grant annual awards to educational institutions and individuals who achieve outstanding achievements in the field of education',
+      ceoLabel: 'Leadership',
+      ceoTitle: 'Chief Executive Officers',
+      ceoSubtitle: 'Leaders guiding our journey towards educational excellence',
+      ceoYadworBadge: 'CEO & Founder - YADWOR',
+      ceoYadworQuote: '"We believe that education is the foundation upon which nations are built, and YADWOR platform is the fruit of our vision to provide a comprehensive educational experience that combines modern technology and high-quality educational content. We aim to empower every student to achieve their dreams."',
+      ceoYadworTitle: 'CEO - YADWOR Platform',
+      ceoAcademyBadge: 'CEO - Success and Educational Progress Academy',
+      ceoAcademyQuote: '"Based on our belief in the importance of developing education and keeping pace with digital transformation, we founded the Success and Educational Progress Academy to be a beacon of science and knowledge. We seek to build an aware generation capable of facing future challenges."',
+      ceoAcademyTitle: 'CEO - Success and Educational Progress Academy',
+      downloadLabel: 'Start Now',
+      downloadTitle: 'Download Yadwor App Now',
+      downloadDesc: 'Join thousands of students and teachers who use YADWOR platform daily. Our app is available on all devices with a smooth and professional experience.',
+      downloadAndroid: 'Download for Android',
+      downloadIOS: 'Download for iOS',
+      footerDesc: 'An educational platform for better education and a more aware and progressive society. One of the leading digital initiatives of the Success and Educational Progress Academy.',
+      footerLinks: 'Quick Links',
+      footerSupport: 'Support',
+      footerHelp: 'Help Center',
+      footerFAQ: 'FAQ',
+      footerContact: 'Contact Us',
+      footerTerms: 'Terms and Conditions',
+      footerPrivacy: 'Privacy Policy',
+      footerContactTitle: 'Contact Us',
+      footerMorocco: 'Kingdom of Morocco',
+      footerCopyright: '© 2026 YADWOR - Success and Educational Progress Academy. All rights reserved.'
+    },
+    fr: {
+      navLogo: 'Yadwor',
+      navAbout: 'À propos',
+      navFeatures: 'Fonctionnalités',
+      navCommunity: 'Communauté',
+      navHonors: 'Honneurs',
+      navCEO: 'PDG',
+      navDownload: 'Télécharger',
+      menuTitle: 'Menu',
+      langTitle: 'Langue',
+      heroTitle1: 'Apprenez intelligemment avec',
+      heroTitle2: 'Yadwor',
+      heroSubtitle: 'Un espace éducatif complet réunissant élèves, enseignants, institutions éducatives et experts dans un environnement sûr, organisé et interactif',
+      btnDownload: 'Télécharger l\'app',
+      btnDiscover: 'Découvrir la plateforme',
+      statStudents: 'Étudiants actifs',
+      statTeachers: 'Enseignants professionnels',
+      statLessons: 'Leçons interactives',
+      statInstitutions: 'Institutions partenaires',
+      yadworName: 'Yadwor',
+      andWord: ' & ',
+      academyName: 'Académie du Succès et du Progrès Éducatif',
+      academySlogan: 'Nous créons la connaissance... et construisons l\'avenir des générations',
+      aboutTitle1: 'Plateforme',
+      aboutTitle2: 'Éducative YADWOR',
+      aboutText1: 'L\'une des initiatives numériques leaders de l\'Académie du Succès et du Progrès Éducatif. Convaincue de l\'importance de développer l\'éducation et de suivre la transformation numérique, l\'Académie a créé la plateforme YADWOR pour être un espace éducatif complet réunissant élèves, enseignants, institutions éducatives et experts dans un environnement sûr, organisé et interactif.',
+      aboutText2: 'À travers la plateforme YADWOR, l\'Académie cherche à contribuer à l\'amélioration de la qualité de l\'éducation au Maroc, en fournissant des outils éducatifs modernes qui aident les élèves à mieux comprendre les leçons, et en donnant aux enseignants et aux institutions éducatives des outils avancés pour livrer le contenu éducatif de manière professionnelle.',
+      aboutText3: 'La plateforme fournit des salles de diffusion en direct interactives qui permettent aux enseignants de dispenser et d\'expliquer les leçons en utilisant des tableaux blancs numériques, avec la possibilité pour les élèves d\'interagir directement via microphone et de poser des questions et discuter dans les sessions éducatives.',
+      aboutQuote: 'Nous créons la connaissance... et construisons l\'avenir des générations.',
+      featuresLabel: 'Pourquoi Yadwor?',
+      featuresTitle: 'Fonctionnalités qui facilitent l\'apprentissage',
+      featuresSubtitle: 'Nous vous offrons une expérience éducative complète avec les dernières technologies et le meilleur contenu',
+      feature1Title: 'Contenu Éducatif Riche',
+      feature1Desc: 'Des milliers de leçons et conférences enregistrées en haute qualité par les meilleurs enseignants dans diverses spécialités',
+      feature2Title: 'Apprentissage Interactif',
+      feature2Desc: 'Sessions en direct et interactives avec les enseignants avec la possibilité de poser des questions et de participer immédiatement',
+      feature3Title: 'Support Continu',
+      feature3Desc: 'Une équipe de support technique spécialisée 24h/24 pour vous aider à tout moment et résoudre tous vos problèmes',
+      feature4Title: 'Suivi de Progression',
+      feature4Desc: 'Un système avancé pour suivre votre progression académique et analyser vos performances avec des rapports détaillés et clairs',
+      feature5Title: 'Enseignants Professionnels',
+      feature5Desc: 'Une élite des meilleurs enseignants et experts dans leurs domaines avec une expérience éducative vaste et distinguée',
+      feature6Title: 'Application Complète',
+      feature6Desc: 'Une application fluide et facile à utiliser qui fonctionne sur tous les appareils avec une expérience utilisateur professionnelle',
+      galleryLabel: 'Communauté Yadwor',
+      galleryTitle: 'Notre Famille Éducative Diverse',
+      gallerySubtitle: 'Nous sommes fiers de servir tous les segments de la communauté éducative: étudiants, enseignants et professionnels',
+      gallery1Title: 'Institutions Éducatives',
+      gallery1Desc: 'Nos partenaires dans le succès et l\'excellence éducative, nous leur fournissons des outils avancés pour livrer le contenu',
+      gallery1Tag: 'Institutions',
+      gallery2Title: 'Élèves',
+      gallery2Desc: 'Notre avenir brillant, nous leur fournissons un environnement d\'apprentissage interactif et sûr qui les aide à exceller',
+      gallery2Tag: 'Étudiants',
+      gallery3Title: 'Influenceurs Éducatifs',
+      gallery3Desc: 'Diffuser la connaissance et l\'inspiration à travers du contenu éducatif pertinent et distingué',
+      gallery3Tag: 'Contenu Numérique',
+      gallery4Title: 'Présentateurs de Conférences',
+      gallery4Desc: 'Vaste expérience et connaissance dans la livraison de contenu éducatif de manière professionnelle en ligne',
+      gallery4Tag: 'Conférences',
+      gallery5Title: 'Ingénieurs',
+      gallery5Desc: 'Innovation et développement continus dans le domaine de l\'ingénierie et de la technologie moderne',
+      gallery5Tag: 'Ingénierie',
+      gallery6Title: 'Docteurs',
+      gallery6Desc: 'Excellence dans la spécialisation académique et la recherche scientifique et contribution à la construction de la connaissance',
+      gallery6Tag: 'Académique',
+      gallery7Title: 'Fournisseurs de Cours de Formation',
+      gallery7Desc: 'Experts dans la livraison de cours de formation et de développement pour développer les compétences professionnelles',
+      gallery7Tag: 'Formation',
+      gallery8Title: 'Enseignants et Éducateurs',
+      gallery8Desc: 'Une élite d\'enseignants professionnels qui consacrent leurs efforts à construire une génération éduquée et consciente',
+      gallery8Tag: 'Éducation',
+      honorsLabel: 'Honneurs et Événements',
+      honorsTitle: 'Nous honorons les distingués et célébrons le succès',
+      honorsSubtitle: 'Nous organisons des événements et des festivals pour honorer tous ceux qui contribuent à diffuser la connaissance et à construire un meilleur avenir',
+      honor1Title: 'Honneur aux Élèves Excellents',
+      honor1Desc: 'Nous célébrons les élèves académiquement distingués et les honorons lors de cérémonies spéciales en reconnaissance de leurs efforts et de leur excellence académique',
+      honor2Title: 'Honneur aux Enseignants Créatifs',
+      honor2Desc: 'Nous honorons les enseignants et éducateurs qui font des efforts exceptionnels dans l\'éducation et contribuent à construire des générations éduquées',
+      honor3Title: 'Festivals de l\'Éducation et de l\'Innovation',
+      honor3Desc: 'Nous organisons des festivals annuels dans diverses villes marocaines pour honorer les créateurs de contenu éducatif et les initiatives distinguées',
+      honor4Title: 'Prix d\'Excellence Éducative',
+      honor4Desc: 'Nous accordons des prix annuels aux institutions éducatives et aux individus qui réalisent des accomplissements remarquables dans le domaine de l\'éducation',
+      ceoLabel: 'Direction',
+      ceoTitle: 'Directeurs Généraux',
+      ceoSubtitle: 'Des leaders guidant notre parcours vers l\'excellence éducative',
+      ceoYadworBadge: 'PDG & Fondateur - YADWOR',
+      ceoYadworQuote: '"Nous croyons que l\'éducation est le fondement sur lequel les nations sont construites, et la plateforme YADWOR est le fruit de notre vision pour fournir une expérience éducative complète qui combine la technologie moderne et le contenu éducatif de haute qualité. Nous visons à permettre à chaque étudiant de réaliser ses rêves."',
+      ceoYadworTitle: 'PDG - Plateforme YADWOR',
+      ceoAcademyBadge: 'PDG - Académie du Succès et du Progrès Éducatif',
+      ceoAcademyQuote: '"Basés sur notre conviction de l\'importance de développer l\'éducation et de suivre la transformation numérique, nous avons fondé l\'Académie du Succès et du Progrès Éducatif pour être un phare de la science et de la connaissance. Nous cherchons à construire une génération consciente capable de faire face aux défis de l\'avenir."',
+      ceoAcademyTitle: 'PDG - Académie du Succès et du Progrès Éducatif',
+      downloadLabel: 'Commencer',
+      downloadTitle: 'Téléchargez l\'App Yadwor Maintenant',
+      downloadDesc: 'Rejoignez des milliers d\'étudiants et d\'enseignants qui utilisent la plateforme YADWOR quotidiennement. Notre application est disponible sur tous les appareils avec une expérience fluide et professionnelle.',
+      downloadAndroid: 'Télécharger pour Android',
+      downloadIOS: 'Télécharger pour iOS',
+      footerDesc: 'Une plateforme éducative pour une meilleure éducation et une société plus consciente et progressive. L\'une des initiatives numériques leaders de l\'Académie du Succès et du Progrès Éducatif.',
+      footerLinks: 'Liens Rapides',
+      footerSupport: 'Support',
+      footerHelp: 'Centre d\'Aide',
+      footerFAQ: 'FAQ',
+      footerContact: 'Contactez-nous',
+      footerTerms: 'Conditions Générales',
+      footerPrivacy: 'Politique de Confidentialité',
+      footerContactTitle: 'Contactez-nous',
+      footerMorocco: 'Royaume du Maroc',
+      footerCopyright: '© 2026 YADWOR - Académie du Succès et du Progrès Éducatif. Tous droits réservés.'
     }
-  });
-
-  // Mobile menu toggle
-  const menuToggle = document.getElementById('menuToggle');
-  const navLinks = document.getElementById('navLinks');
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-
-  // Close menu on link click
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('active');
-    });
-  });
-
-  // Language selector
-  const langBtn = document.getElementById('langBtn');
-  const langDropdown = document.getElementById('langDropdown');
-  const langOptions = document.querySelectorAll('.lang-option');
-  const langText = langBtn.querySelector('.lang-text');
-
-  const langNames = {
-    'ar': 'العربية',
-    'en': 'English',
-    'fr': 'Français'
   };
 
+  const langNames = { 'ar': 'العربية', 'en': 'English', 'fr': 'Français' };
+
+  // Language switcher - Desktop
+  const langBtn = document.getElementById('langBtn');
+  const langDropdown = document.getElementById('langDropdown');
+  const currentLangText = document.getElementById('currentLangText');
+  const desktopLangOptions = document.querySelectorAll('#langDropdown .lang-option');
+  const sideLangOptions = document.querySelectorAll('.side-menu-lang-option');
+  const langTextElements = document.querySelectorAll('[data-i18n]');
+
+  function applyLanguage(lang) {
+    langTextElements.forEach(el => {
+      const key = el.dataset.i18n;
+      if (translations[lang][key]) {
+        el.textContent = translations[lang][key];
+      }
+    });
+
+    if (lang === 'ar') {
+      document.documentElement.lang = 'ar';
+      document.documentElement.dir = 'rtl';
+    } else if (lang === 'en') {
+      document.documentElement.lang = 'en';
+      document.documentElement.dir = 'ltr';
+    } else if (lang === 'fr') {
+      document.documentElement.lang = 'fr';
+      document.documentElement.dir = 'ltr';
+    }
+
+    // Sync both language selectors
+    desktopLangOptions.forEach(o => {
+      o.classList.toggle('active', o.dataset.lang === lang);
+    });
+    sideLangOptions.forEach(o => {
+      o.classList.toggle('active', o.dataset.lang === lang);
+    });
+    currentLangText.textContent = langNames[lang];
+  }
+
+  // Desktop dropdown
   langBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     langDropdown.classList.toggle('active');
   });
 
-  langOptions.forEach(option => {
+  desktopLangOptions.forEach(option => {
     option.addEventListener('click', () => {
-      const lang = option.dataset.lang;
-      langOptions.forEach(o => o.classList.remove('active'));
-      option.classList.add('active');
-      langText.textContent = langNames[lang];
+      applyLanguage(option.dataset.lang);
       langDropdown.classList.remove('active');
+    });
+  });
+
+  // Side menu language
+  sideLangOptions.forEach(option => {
+    option.addEventListener('click', () => {
+      applyLanguage(option.dataset.lang);
+      closeSideMenu();
     });
   });
 
@@ -1804,6 +2404,32 @@
     if (!langBtn.contains(e.target) && !langDropdown.contains(e.target)) {
       langDropdown.classList.remove('active');
     }
+  });
+
+  // Side menu
+  const menuToggle = document.getElementById('menuToggle');
+  const sideMenu = document.getElementById('sideMenu');
+  const sideMenuOverlay = document.getElementById('sideMenuOverlay');
+  const sideMenuClose = document.getElementById('sideMenuClose');
+
+  function openSideMenu() {
+    sideMenu.classList.add('active');
+    sideMenuOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeSideMenu() {
+    sideMenu.classList.remove('active');
+    sideMenuOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  menuToggle.addEventListener('click', openSideMenu);
+  sideMenuClose.addEventListener('click', closeSideMenu);
+  sideMenuOverlay.addEventListener('click', closeSideMenu);
+
+  document.querySelectorAll('.side-menu-links a').forEach(link => {
+    link.addEventListener('click', closeSideMenu);
   });
 
   // Scroll reveal animations
@@ -1821,7 +2447,7 @@
 
   revealElements.forEach(el => revealObserver.observe(el));
 
-  // Smooth scroll for anchor links
+  // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const target = document.querySelector(this.getAttribute('href'));
